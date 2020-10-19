@@ -46,10 +46,9 @@ public class task_1 {
 
     public static int CountNegativeNumbersUntil(int [] array, int end){
         int counter = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (i < end)
-                if (array[i] < 0)
-                    counter++;
+        for (int i = 0; i < end; i++) {
+            if (array[i] < 0)
+                counter++;
         }
         return counter;
     }
