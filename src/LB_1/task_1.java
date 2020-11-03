@@ -82,8 +82,12 @@ public class task_1 {
 
         int max_value = max(array);
         int max_value_index = GetIndex(max_value, array);
+        // Визначити число від’ємних елементів, що розташовані перед найбільшим додатнім елементом одномірного масиву, розмірності N.
         int count_of_negative_numbers = CountNegativeNumbersUntil(array, max_value_index);
 
+
+        // Якщо шукане число від’ємних елементів буде дорівнювати 0, то відсортувати у спадному порядку елементи розташовані
+        // після найбільшого додатного елемента.
         if (count_of_negative_numbers == 0 && max_value > 0) {
             SpecialSort(array, max_value_index);
         }

@@ -68,10 +68,14 @@ public class task_2 {
 
         Read_Input(matrix);
 
+        // В матриці А знайти відношення кількості додатних елементів до кількості від’ємних.
         System.out.println("Соотношение положительных и отрицательных чисел");
         float numbers_ratio = RatioOfNegativeAndPositiveNumbers(matrix);
         System.out.println(numbers_ratio);
 
+
+         //       Матрицю В утворити з матриці А,
+        // відобразивши її симетрично відносно середнього рядка.
         System.out.println("\nОтраженная симетрично Матрица Б");
         int [][] matrix2 = new int[MATRIX_SIZE][MATRIX_SIZE];
         SpecialFunc(matrix, matrix2);

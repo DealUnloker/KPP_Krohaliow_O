@@ -7,5 +7,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="groovy-3.0.5" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://C:/Program Files (x86)/Groovy/lib/extras-jaxb" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://C:/Program Files (x86)/Groovy/lib/extras-jaxb" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
