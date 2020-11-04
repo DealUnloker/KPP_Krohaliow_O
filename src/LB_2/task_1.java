@@ -25,9 +25,10 @@ public class task_1 {
 
     public static String getUserInfo(){
         Scanner in = new Scanner(System.in);
-        System.out.print("Input name: ");
+        System.out.print("Input date: ");
         return in.nextLine();
     }
+
     public static void main() {
 
         String input;

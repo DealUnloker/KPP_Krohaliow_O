@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class Employee {
     private String surname;
-    private String position;
-    private String department;
-    private int certificate_number;
+    private String position = "manager";
+    private String department = "UFSDF";
+    private int certificate_number = 1;
     private boolean isLocatedAtWork;
-    private Date last_entrance;
-    private Date last_exit;
+    private Date last_entrance = new Date(System.currentTimeMillis());
+    private Date last_exit = new Date(System.currentTimeMillis());
 
     public String getSurname() {
         return surname;
@@ -48,7 +48,7 @@ public class Employee {
     }
 
     public void setLocatedAtWork(boolean locatedAtWork) {
-        this.isLocatedAtWork = locatedAtWork;
+        isLocatedAtWork = locatedAtWork;
     }
 
     public Date getLast_entrance() {
@@ -67,11 +67,8 @@ public class Employee {
         this.last_exit = last_exit;
     }
 
-
-    public Employee(String surname, String position, String department, int certificate_number) {
+    public Employee(String surname, boolean isLocatedAtWork) {
         this.surname = surname;
-        this.position = position;
-        this.department = department;
-        this.certificate_number = certificate_number;
+        this.isLocatedAtWork = isLocatedAtWork;
     }
 }
