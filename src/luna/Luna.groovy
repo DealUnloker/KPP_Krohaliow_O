@@ -2,9 +2,12 @@ package luna
 
 class Luna {
     static boolean luna(code) {
-        def reduced_code = code.findAll({ it.isInteger() }).collect({ it.toString().toInteger() })
-        def positive = reduced_code[(0..15).step(2)].collect({(it * 2 > 9) ? (it * 2 - 9) : (it * 2) })
-        def negative = reduced_code[(1..15).step(2)]
+        def reduced_code = code
+                .findAll({ it.isInteger() })
+                .collect({ it as int })
+        def positive = reduced_code[(14..0).step(2)]
+                .collect({(it * 2 > 9) ? (it * 2 - 9) : (it * 2) })
+        def negative = reduced_code[(15..1).step(2)]
         return (positive.sum() + negative.sum()) % 10 == 0
     }
 
