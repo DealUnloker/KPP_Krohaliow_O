@@ -1,6 +1,6 @@
 package LB_2;
 
-public class Main {
+public class lb2 {
     public static void main(String[] args) {
 
         //TASK 1

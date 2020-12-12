@@ -68,7 +68,7 @@ public class task_1 {
     public static void PrintAnswer(int[] array){
         for (int i = 0; i < array.length; i++) {
             System.out.printf("%d", array[i]);
-            if (i != array.length - 1) {
+            if (i != array.length - 1) { //no
                 System.out.print(" ");
             }
         }
@@ -80,6 +80,7 @@ public class task_1 {
         int [] array = new int [ARRAY_SIZE];
         Read_Input(array, ARRAY_SIZE);
 
+        // сразу определить индекс максимального числа
         int max_value = max(array);
         int max_value_index = GetIndex(max_value, array);
         // Определить число отрицательных элементов, расположенных перед самым большим положительным элементом одномерного массива, размерности N.

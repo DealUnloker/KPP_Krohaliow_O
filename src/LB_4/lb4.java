@@ -12,7 +12,7 @@ public class lb4 {
     }
 
     public static void main(String[] args) {
-        String fileName = "src/LB_4/files/employees.ser";
+        String fileName = "inputs/employees.ser";
         Employees employees = new Employees();
 
         // Create and save employees

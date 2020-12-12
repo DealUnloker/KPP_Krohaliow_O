@@ -1,6 +1,6 @@
 package LB_3;
 
-public class Main {
+public class lb3 {
 
     public static void ShowEmployeesIn(Employee[] employees){
         System.out.println("\nПрисутствующие работники:");
@@ -56,6 +56,6 @@ public class Main {
         ShowEmployeesIn(employees);
         ShowEmployeesOut(employees);
 
-        FindEmployee(employees, "Krohalow");
+        FindEmployee(employees, "Krohaliow");
     }
 }

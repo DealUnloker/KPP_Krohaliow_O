@@ -1,6 +1,6 @@
 package LB_1;
 
-class Main {
+class lb1 {
     public static void main(String[] args) {
 
         // TASK 1
@@ -23,7 +23,7 @@ class Main {
 // якщо у рядку з номером k кількість додатних елементів більша ніж кількість від’ємних, то bk=1(true), інакше bk=0(false).
 // Потім необхідно розташувати елементи кожного стовпця масиву А у порядку збільшення.
 
-//        System.out.println("\n\nЗадание №3");
-//        task_3.main();
+        System.out.println("\n\nЗадание №3");
+        task_3.main();
     }
 }

@@ -1,7 +1,8 @@
-package LB_4;
+package LB_5;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Employees {
     private List<Employee> employees = new ArrayList<>();
@@ -9,6 +10,8 @@ public class Employees {
     public List<Employee> getEmployees() {
         return employees;
     }
+
+    public Employee getEmployeeById(int id){ return employees.get(id); }
 
     public void ShowSurNamesEmployees(){
         for (Employee employee : employees){
@@ -32,6 +35,10 @@ public class Employees {
             }
         }
         System.out.println("Employee is not found!");
+    }
+
+    public void deleteEmployeeById(int id){
+        employees.remove(id);
     }
 
     public void saveToFile(String fileName){
@@ -88,7 +95,16 @@ public class Employees {
         }
     }
 
-    public Employees() {
-        employees= new ArrayList<>(); // better inside
+    public String[][] GetArrayOfSurnamesAndDepartments(){
+        String[][] array = new String[employees.size()][2];
+        for (int i = 0; i < employees.size(); i++){
+            array[i][0] = employees.get(i).getSurname();
+            array[i][1] = employees.get(i).getDepartment();
+        }
+        return array;
+    }
+
+    public int size(){
+        return employees.size();
     }
 }
