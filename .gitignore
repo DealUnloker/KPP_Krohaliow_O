@@ -24,4 +24,5 @@ hs_err_pid*
 
 
 src/tmp
-gradle
+.gradle
+.idea
