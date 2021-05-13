@@ -17,9 +17,5 @@ public class Main {
         ford.setUser(user);
         user.addAuto(ford);
         userService.updateUser(user);
-
-        for (User u : userService.findAllUsers()) {
-            System.out.println(u.getAge());
-        }
     }
 }
