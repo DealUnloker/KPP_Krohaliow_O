@@ -1,46 +1,44 @@
-package modelDTO;
+package DAO;
 
-import model.Auto;
-import model.User;
+import model.Enterprise;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
+
+import javax.persistence.EntityManagerFactory;
 import java.util.List;
-public class UserDAO {
 
-    public User findById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(User.class, id);
+public class EnterpriseDAO {
+    public Enterprise findById(int id){
+        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Enterprise.class, id);
     }
 
-    public void save(User user) {
+    public void save(Enterprise enterprise) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.save(user);
+        session.save(enterprise);
         tx1.commit();
         session.close();
     }
 
-    public void update(User user) {
+    public void update(Enterprise enterprise) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.update(user);
+        session.update(enterprise);
         tx1.commit();
         session.close();
     }
 
-    public void delete(User user) {
+    public void delete(Enterprise enterprise) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
-        session.delete(user);
+        session.delete(enterprise);
         tx1.commit();
         session.close();
     }
 
-    public Auto findAutoById(int id) {
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Auto.class, id);
-    }
 
-    public List<User> findAll() {
-        return (List<User>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From User").list();
+    public List<Enterprise> findAll() {
+        return (List<Enterprise>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From Enterprise").list();
     }
 }
